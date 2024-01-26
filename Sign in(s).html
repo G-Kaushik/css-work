@@ -10,8 +10,17 @@
             width: 150px;
             height: 100px;
             border-radius: 10%;
+            position: absolute;
+            top: 2%;
+            left: 1%;
         }
-        
+
+        .contain{
+            position: absolute;
+            top: 20%;
+            left: 35%;
+        }
+
         h1 {
             color: darkblue;
             font-style: italic;
@@ -32,20 +41,20 @@
             border-radius: 2%;
         }
 
-        .credential input{
+        .credential input {
             padding: 1%;
             border-radius: 5px;
             border-width: 5px;
             border-color: lightseagreen;
         }
 
-        a{
-            color:darkred;
+        a {
+            color: darkred;
             font-style: italic;
             text-shadow: 1px 1px 4px #000000;
         }
 
-        input[type="submit"]{
+        input[type="submit"] {
             padding: 10px;
             padding-right: 60px;
             padding-left: 60px;
@@ -58,22 +67,26 @@
 </head>
 
 <body>
-    <a target="_blank" href="Logo Site(s).html"><img src="https://i.pinimg.com/originals/37/4d/0a/374d0a6fa7f03e8ff62aa7f08eb1e8ff.jpg" alt="Site Logo" width="150px" height="100px" /></a>
-    <center>
-        <h1><u>Sign In</u></h1>
-        <form action="Blog(s).html">
-            <div class="sign">
-                <div class="credential">
-                <p><input type="email" placeholder="Enter Email ID" required /></p>
-                <p><input type="password" placeholder="Enter Password" required /></p>
+    <a target="_blank" href="Logo Site(s).html"><img
+            src="https://i.pinimg.com/originals/37/4d/0a/374d0a6fa7f03e8ff62aa7f08eb1e8ff.jpg" alt="Site Logo"
+            width="150px" height="100px" /></a>
+        <div class="contain">
+            <center>
+            <h1><u>Sign In</u></h1>
+            <form action="Blog(s).html">
+                <div class="sign">
+                    <div class="credential">
+                        <p><input type="email" placeholder="Enter Email ID" required /></p>
+                        <p><input type="password" placeholder="Enter Password" required /></p>
+                    </div>
+                    <a href="Registration page(s).html">Forgot Password</a>
+                    <br>
+                    <a href="Registration page(s).html">New User? Then Register!</a>
+                    <p><input type="submit" value="Sign In"></p>
                 </div>
-                <a href="Registration page(s).html">Forgot Password</a>
-                <br>
-                <a href="Registration page(s).html">New User? Then Register!</a>
-                <p><input type="submit" value="Sign In"></p>
-            </div>
+            </center>
+        </div>
         </form>
-    </center>
 </body>
 
 </html>
