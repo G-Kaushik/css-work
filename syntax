@@ -1,0 +1,21 @@
+Syntax:-
+
+selector{
+    property:value;
+    property:value;
+    property:value;
+}
+
+selctor--- is an identity to pick an element in html
+    simple
+        element, id(#), class(.)
+    combinator
+        descandant( ), chid(>), adjucent sibiling(+), general sibling(~)
+    pseudo class
+        :link, :visited, :hover, :active
+    pseudo element
+        ::firest-line, ::last-line, ::first-letter
+    attribute selctor
+
+
+color

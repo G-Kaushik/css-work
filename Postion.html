@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .name{
+            color:white;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            left: 45%;
+            z-index: 10; /* z-index: "a number" must be used for position a elemnt using absolute */
+        }
+        img{
+            position: absolute;
+            top: 0%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="name">GOOD NIGHT!</h1>
+    <img width="100%" src="https://media.istockphoto.com/id/532378051/photo/night-sky-with-stars-and-clouds.jpg?s=612x612&w=0&k=20&c=M6HA8A8tq5cbJsAU0y39Qx6dTyoIti-CaYMi9WWbB_U=" alt="night sky"/>
+</body>
+</html>
+<!--
+    The values of position are
+    static
+    relative
+    absolute
+    fixed
+    sticky
+-->

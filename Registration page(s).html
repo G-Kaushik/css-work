@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register!</title>
+    <style>
+        img{
+            width: 150px;
+            height: 100px;
+            float: left;    /*to place image on the left*/
+            border-radius: 10%;
+        }
+        body {
+            background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg");
+            background-size: cover;
+        }
+
+        .reg {
+            background-color: rgba(27, 27, 27, 0.2);
+            width: 550px;
+            height: 800px;
+            margin: 2% 0% 2% 0%;
+            padding: 0.6%;
+            border-radius: 10%;
+        }
+
+        h1{
+            color: darkblue;
+            font-style: italic;
+            text-shadow: 1px 1px 4px #000000;
+        }
+        .fill input{
+            padding: 1%;
+            border-radius: 5px;
+            border-width: 5px;
+            border-color: lightseagreen;
+        }
+        .date{
+            font-size: 20px;
+            color: darkred;
+            font-style: italic;
+            text-shadow: 1px 1px 4px #000000;
+        }
+        .date input{
+           padding: 7px;
+           border-width: 5px;
+           border-color: lightseagreen  
+        }
+        .gender{
+            font-size: 25px;
+            font-style: italic;
+            color: darkred;
+            text-shadow: 1px 1px 4px #000000;
+        }
+        fieldset{
+            font-size: 20px;
+            border-color: lightseagreen;
+            border-width: 5px;
+        }
+        select{
+            padding: 10px;
+            border-width: 5px;
+            border-color: lightseagreen;
+        }
+        .intrested{
+            font-size: 20px;
+            font-style: italic;
+            color: darkred;
+            text-shadow: 1px 1px 4px #000000;
+        }
+        input[type="submit"]{
+            padding: 10px;
+            padding-right: 60px;
+            padding-left: 60px;
+            border-width: 3px;
+            border-color: darkblue;
+            background-color: lightblue;
+            text-shadow: 1px 1px 2px #000000;
+        }
+        input[type="reset"]{
+            padding: 10px;
+            padding-right: 60px;
+            padding-left: 60px;
+            border-width: 3px;
+            border-color: darkblue;
+            background-color: lightblue;
+            text-shadow: 1px 1px 2px #000000;
+        }
+        textarea{
+            font-size: 15px;
+            padding: 10px;
+            border-width: 5px;
+            padding-right: 90px;
+            padding-left: 90px;
+            border-color: lightseagreen
+        }
+        a{
+            color:darkred;
+            font-style: italic;
+            text-shadow: 1px 1px 4px #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <a href="Logo Site(s).html"><img src="https://i.pinimg.com/originals/37/4d/0a/374d0a6fa7f03e8ff62aa7f08eb1e8ff.jpg" alt="logo"/></a>
+        <h1><u>Registration Page</u></h1>
+        <div class="reg">
+            <form action="Sign in(s).html">
+                <div class="fill">
+                    <p><input type="text" placeholder="Enter Full Name" required /></p>
+                    <p><input type="email" placeholder="Enter Email ID" required /></p>
+                    <p><input type="password" placeholder="Enter Password" required /></p>
+                    <p><input type="password" placeholder="Confirm Password" required /></p>
+                    <p><input type="number" placeholder="Enter Mobile Number" /></p>
+                </div>
+                <label class="date">DOB:<input type="date" /></label>
+                <p>
+                    <label class="gender">Gender:</label>
+                    <input type="radio" name="answer" checked />Male
+                    <input type="radio" name="answer" />Female
+                    <input type="radio" name="answer" />Others
+                </p>
+                <p>
+                <fieldset>
+                    <label>Educational qualification:</label>
+                    <input type="checkbox" />10th
+                    <input type="checkbox" />Intermediate
+                    <input type="checkbox" />Diploma
+                </fieldset>
+                </p>
+                <p>
+                    <u class="intrested">Mostly Intrested in:</u>
+                    <select>
+                        <option>Cricket Celebrities</option>
+                        <option>Bollywood Celebrities</option>
+                        <option>International Celebrities</option>
+                        <option>Technological Developers</option>
+                        <option>Political Celebrities</option>
+                    </select>
+                </p>
+                <p>
+                    <textarea rows="5" type="text" placeholder="Address(optional)"></textarea>
+                </p>
+                <p>
+                    <input type="submit" />
+                </p>
+                <p>
+                    <input type="reset" />
+                </p>
+                <p><a href="Sign in(s).html">Already a customer? Sign in.</a></p>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
