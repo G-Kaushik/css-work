@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Duplicate</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            max-height: 100vh;
+            z-index: 2;
+        }
+
+        .container {
+            border: 1px solid rgba(128, 128, 128, 0.4);
+            width: 350px;
+            height: 400px;
+            position: absolute;
+            top: 6.5%;
+            left: 51.5%;
+            padding: 1%;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 260px;
+            height: 22px;
+            background-color: rgba(128, 128, 128, 0.05);
+            border-width: 0.5px;
+            border-color: rgba(128, 128, 128, 0.2);
+            border-radius: 3px;
+            padding: 2%;
+        }
+
+        input[type="submit"] {
+            width: 275px;
+            height: 35px;
+            border: none;
+            border-radius: 10px;
+            background-color: #0095f6;
+            color: white;
+            font-size: 100%;
+            font-weight: bold;
+        }
+
+        .or p::before {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 1px;
+            background-color: 1px solid rgba(128, 128, 128, 0.2);
+            background: rgba(128, 128, 128, 0.2);
+            position: absolute;
+            left: 9%;
+            top: 75.5%;
+        }
+
+        .or p::after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 1px;
+            background-color: 1px solid rgba(128, 128, 128, 0.2);
+            background: rgba(128, 128, 128, 0.2);
+            position: absolute;
+            right: 9%;
+            top: 75.5%;
+        }
+
+        .or {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(128, 128, 128, 1);
+            font-weight: bold;
+        }
+
+        .facebook a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3f51b5;
+            font-size: 14px;
+            display: inline;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #3f51b5;
+        }
+
+        .box {
+            border: 1px solid rgba(128, 128, 128, 0.4);
+            width: 385px;
+            height: 68px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            position: absolute;
+            left: 51.5%;
+            top: 62%;
+        }
+
+        .box a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #0095f6;
+        }
+
+        .bottom {
+            text-align: center;
+            font-weight: thinner;
+            position: absolute;
+            left: 61%;
+            top: 71.5%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .img1 {
+            position: absolute;
+            left: 54%;
+            top: 78%;
+            height: 45px;
+            width: 150px;
+            border-radius: 7px;
+        }
+
+        .img2 {
+            position: absolute;
+            left: 65%;
+            top: 78%;
+            height: 45px;
+            width: 120px;
+        }
+
+        .img3 {
+            height: 650px;
+            width: 425px;
+            position: absolute;
+            top: 4%;
+            left: 24%;
+        }
+
+        .tlinks a{
+            color: rgba(128, 128, 128, 1);
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            margin-right: 1%;
+            font-size: smaller;
+        }
+
+        .tlinks{
+            position: absolute;
+            left: 10%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form class="container">
+            <img src="https://1000logos.net/wp-content/uploads/2017/02/Instagram-Logo-2010-2013.png"
+                alt="instagram written" height="105px" width="200px" />
+            <p><input type="text" placeholder="Phone Number, username, or email" /></p>
+            <p><input type="password" placeholder="Password" /></p>
+            <p><input type="submit" value="Log in" /></p>
+            <div class="or">
+                <p>OR</p>
+            </div>
+            <div class="facebook">
+                <a href="https:/www.facebook.com">
+                    <p><img src="https://png.pngtree.com/png-clipart/20180515/ourmid/pngtree-facebook-icon-png-image_3566125.png"
+                            alt="facebook logo" width="27px" height="27px" /><b>Log in with Facebook</b></p>
+                </a>
+            </div>
+            <div class="forgot">
+                <a href="">Forgotten your Password?</a>
+            </div>
+    </center>
+    </form>
+    <div class="box">
+        <p>Don't have an account?<a href="">Sign Up</a></p>
+    </div>
+    <p class="bottom">Get the app.</p>
+    <img src="google play.png" alt="google play image" class="img1" />
+    <img src="microsoft.png" alt="microsoft image" class="img2" />
+    <img src="insta phone.png" alt="instagram phone" class="img3" />
+    <div class="tlinks">
+        <a href="">Meta</a>
+        <a href="">About</a>
+        <a href="">Blog</a>
+        <a href="">Jobs</a>
+        <a href="">Help</a>
+        <a href="">API</a>
+        <a href="">Privacy</a>
+        <a href="">Terms</a>
+        <a href="">Locations</a>
+        <a href="">Instagram Lite</a>
+        <a href="">Threads</a>
+        <a href="">Contact Uploading & Non-Users</a>
+        <a href="">Meta Verified</a>
+    </div>
+</body>
+
+</html>
