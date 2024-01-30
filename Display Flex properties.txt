@@ -1,0 +1,25 @@
+Display: Flex properties
+
+
+
+flex-direction
+row, column, row-reverse, column-reverse
+
+
+flex-wrap
+wrap, no-wrap, warp-reverse
+
+
+flex-flow ( combination of flex directon and flex wrap )
+
+
+jutify-content
+flex-start, flex-end, center, space-around, space-between, space-evenly
+
+
+align-items (same as justify-content)
+flex-start, flex-end, center, space-around, space-between, space-evenly
+
+
+align-content (same as justify-content except strech)
+flex-start, flex-end, center, space-around, space-between, space-evenly, strech

@@ -1,0 +1,43 @@
+Font And Text Properties:
+
+
+Text Properties:
+
+text-align
+left, right, center, justify
+
+text-transform
+uppercase, lowercase, capitalise(for all word's first letter to have capital letter)
+
+text-decoration
+underline, overline, none, line-through
+
+text indent
+a number followed by pixels
+
+letter-spacing
+a number followed by pixels
+
+word-spacing
+a number followed by pixels
+
+line-hide
+a number
+
+
+
+Font Properties:
+
+font-family
+serif, sans serif, fantacy, monospace, cursive
+
+font-size
+a number followed by pixels or rem
+
+font-weight
+normal, bold
+
+font-style
+italic, oblique, normal
+
+google-font
