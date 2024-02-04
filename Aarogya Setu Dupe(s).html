@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarogya Setu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="browser icon"
+        href="https://play-lh.googleusercontent.com/2FV06dPOPcV-vupN9_9zqPn-pUUio-OzbnqktzIVCdkPcBRRtqo-k63G1DLgIeuJD1np" />
+    <style>
+        /** {
+            padding: 0%;
+            border: 1px solid red;
+        }*/
+
+        .nav{
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .top {
+            background-color: #089444;
+            text-align: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 95%;
+        }
+
+        .top a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .fa-brands {
+            margin-right: 200px;
+            color: white;
+            border-right: 1px solid rgba(255, 255, 255, 0.456);
+            padding: 0.5%;
+        }
+
+        .fa-phone {
+            background-color: #f97918;
+            color: #089444;
+            border-radius: 3px;
+            padding: 0.12% !important;
+            font-size: 80% !important;
+        }
+
+        .skip {
+            border-right: 0.5px solid rgba(255, 255, 255, 0.456);
+            border-left: 0.5px solid rgba(255, 255, 255, 0.456);
+            padding: 0.5%;
+        }
+
+        .line2 a {
+            text-decoration: none;
+            color: black;
+            margin-left: 1%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            margin: 0% -2% 0% -2%;
+        }
+
+        .line2 a:hover {
+            color: #f97918;
+            text-decoration: underline;
+        }
+
+        .line2 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0% 10% 0% 10%;
+        }
+
+        .qr {
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            width: 120px;
+        }
+
+        .caption {
+            display: block;
+        }
+
+        .line4 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            margin: 1% 30% 1% 30%;
+        }
+
+        .line4 * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .upper {
+            color: #f97918;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 80%;
+        }
+
+        .lower {
+            color: #f97918;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 60%;
+        }
+
+        .fa-down-long {
+            color: rgba(0, 0, 0, 0.4);
+            margin-right: 50px !important;
+        }
+
+        .uplo a {
+            text-decoration: none;
+        }
+
+        .uplo a:hover {
+            color: red;
+        }
+
+        .number {
+            color: #f97918;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bold {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+        }
+
+        .light {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .line5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: #292b76;
+            margin-top: 2%;
+        }
+
+        .line5:before {
+            content: "";
+            width: 1.2%;
+            border: 3px solid #f97918;
+            margin-right: 0.5%;
+        }
+
+        .line6 {
+            margin: 1% 0% 0% 15%;
+            display: flex;
+            gap: 2%;
+        }
+
+        .line6 p {
+            width: 14.7%;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .line7 {
+            margin: 0% 15% 0% 15%;
+            color: rgba(0, 0, 0, 0.6);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 4%;
+        }
+
+        .place1 {
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background-color: rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+            padding-bottom: 5%;
+        }
+
+        .container1 {
+            width: 34%;
+            margin-top: 4%;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container1 h1 {
+
+            font-weight: bold;
+            color: #292b76;
+            font-size: 28px;
+        }
+
+        .regis {
+            color: #f97918;
+            font-size: 50px;
+        }
+
+        .container1 iframe {
+            border-radius: 20px;
+            margin-top: 2%;
+        }
+
+        .container2 {
+            width: 34%;
+            margin-top: 4%;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container2 h1 {
+
+            font-weight: bold;
+            color: #292b76;
+            font-size: 28px;
+            width: 65%;
+        }
+
+        .work {
+            color: #f97918;
+            font-size: 50px;
+        }
+
+        .container2 iframe {
+            border-radius: 20px;
+            margin-top: 2%;
+        }
+
+        .place2 * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .place2 {
+            text-align: center;
+        }
+
+        .place2 h1 {
+            font-weight: bold;
+            color: #292b76;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 3%;
+        }
+
+        .p2dash {
+            color: #f97918;
+            font-size: 50px;
+        }
+
+        .date {
+            color: #A1A1A1;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            margin-top: 0.5%;
+        }
+
+        .pink_box {
+            border: 1px solid #de647d;
+            background-color: #de647d;
+            width: 125px;
+            height: 125px;
+            display: inline-grid;
+            align-items: center;
+
+        }
+
+        .red_box {
+            border: 1px solid #f02a2a;
+            background-color: #f02a2a;
+            width: 125px;
+            height: 125px;
+            display: inline-grid;
+            align-items: center;
+        }
+
+        .green_box {
+            border: 1px solid #22927c;
+            background-color: #22927c;
+            width: 125px;
+            height: 125px;
+            display: inline-grid;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .black_box {
+            border: 1px solid #202125;
+            background-color: #202125;
+            width: 125px;
+            height: 125px;
+            display: inline-grid;
+            align-items: center;
+            gap: 20%;
+        }
+
+        .pink_box p,
+        .red_box p,
+        .green_box p,
+        .black_box p {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            width: 98%;
+            font-size: 1.222em;
+        }
+
+        .pink_box span,
+        .red_box span,
+        .green_box span,
+        .black_box span {
+            font-size: 1.222em;
+            font-weight: 700;
+        }
+
+        .box {
+            margin-top: 1%;
+        }
+
+        .box div {
+            margin-right: 2%;
+        }
+
+        .p2last {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1%;
+            margin-top: 3%;
+        }
+
+        .p2last h4 {
+            color: #565656;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .crore {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 2%;
+            margin-bottom: 6%;
+        }
+
+        .crore span {
+            color: #292b76;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .place3 {
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        .place3 h2 {
+            text-align: center;
+            color: #292b76;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 6%;
+        }
+
+        .place3 .why {
+            font-weight: bold;
+        }
+
+        .place3 .why_after {
+            font-weight: normal;
+        }
+
+        .place3 .why_before {
+            color: #f97918;
+            font-size: 60px;
+        }
+
+        .contain1head,
+        .contain2head,
+        .contain3head {
+            display: flex;
+            align-items: center;
+            gap: 1%;
+        }
+
+        .contain1,
+        .contain2,
+        .contain3 {
+            width: 23%;
+
+        }
+
+        .contain1 p,
+        .contain2 p,
+        .contain3 p {
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+        }
+
+        .contain1head h3,
+        .contain2head h3,
+        .contain3head h3 {
+            color: #019343;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .contains {
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+            margin-bottom: 8%;
+        }
+
+        .media {
+            border: 1px solid #333333;
+            background-color: #333333;
+        }
+
+        .media_start {
+            text-align: center;
+        }
+
+        .media h2 {
+            margin-top: 3%;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+        }
+
+        .media_dash {
+            color: #f97918;
+            font-size: 60px;
+        }
+
+        .media .media_text {
+            color: #A1A1A1;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin-top: -2%;
+        }
+
+        .media .info {
+            border: 1px solid #f97918;
+            background-color: #f97918;
+            padding: 0.6% 1.5% 0.6% 1.5%;
+        }
+
+        .media .vid {
+            border: 1px solid #828282;
+            background-color: #828282;
+            padding: 0.6% 3% 0.6% 3%;
+        }
+
+        .media .vid:hover {
+            border: 1px solid #f97918;
+            background-color: #f97918;
+        }
+
+        .media .info,
+        .media .vid {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin-right: 0.2%;
+            font-size: 14px;
+        }
+
+        .media .info_vid {
+            margin-top: 2%;
+        }
+
+        .media .empty {
+            border: 1px solid #828282;
+            background-color: #828282;
+            padding: 0.1% 1.5% 0.1% 1.5%;
+            width: 5.1%;
+            margin-left: 41.2%;
+            margin-right: auto;
+        }
+
+        .mimg1 p,
+        .mimg2 p,
+        .mimg3 p {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .media_imgs {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            gap: 2%;
+        }
+
+        .mimg1,
+        .mimg2,
+        .mimg3 {
+            text-align: center;
+            width: 30%;
+        }
+
+        .scroll {
+            color: white;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .scroll i {
+            border: 1px solid #959191;
+            background-color: #959191;
+            padding: 0.5%;
+            border-radius: 60px;
+            margin-right: 0.5%;
+        }
+
+        .place4 {
+            margin-bottom: 7%;
+        }
+
+        .twit1 {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+
+            margin: 1% 1% 5% 1%;
+        }
+
+        .twit1,
+        .twit2 {
+            width: 50%;
+        }
+
+        .twit2 img {
+            width: 100%;
+            height: 120%;
+        }
+
+        .twitter {
+            display: flex;
+        }
+
+
+        .twit1 .twithead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 2%;
+            padding-left: 2%;
+        }
+
+        .setu_twit {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .follow {
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            padding: 1%;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .twitmain {
+            text-align: center;
+        }
+
+        .twitmain p {
+            text-align: left;
+            margin-left: 20%;
+            width: 18%;
+            border: 1px solid #1d9bf0;
+            background-color: #1d9bf0;
+            color: white;
+            padding: 2% 4% 2% 4%;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .place5 {
+            background-color: #D2D2FF;
+        }
+
+        .place5 img {
+            margin: 7% 2% 8% 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="nav">
+        <div class="top">
+            <a href="">
+                <i class="fa-solid fa-phone"></i>
+                IVRS - 1921
+            </a>
+            <a class="skip" href="">
+                Skip to main content
+            </a>
+            <i class="fa-brands fa-accessible-icon"></i>
+        </div>
+        <div class="line2">
+            <img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/aarogya_logo.png"
+                alt="gov logo" />
+            <a class="how" href="">HOW SETU WORKS</a>
+            <a href="">COVID UPDATES</a>
+            <a href="">WHY SETU</a>
+            <a href="">MEDIA GALLERY</a>
+            <a href="">DOCUMENTS</a>
+            <div class="qr">
+                <img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/arogya_qr.png" alt="qr" />
+                <span class="caption">Scan to Download</span>
+            </div>
+        </div>
+    </section>
+    <div class="line3">
+        <a href="https://www.cowin.gov.in/" target="_blank"><img
+                src="https://static.mygov.in/media/aarogyasetu/2021/04/mygov-10000000001946816780.jpg" alt="modi img"
+                width="100%" /></a>
+    </div>
+    <div class="line4">
+        <div>
+            <p class="number">21,82,00,000</p>
+            <p class="bold">TOTAL <b>DOWNLOADED</b></p>
+            <p class="light">Android, iOS and KaiOS</p>
+        </div>
+        <div>
+            <p class="number">93,58,79,494</p>
+            <p class="bold">TOTAL SAMPLES TESTED</p>
+            <p class="light">Up To Oct 30, 2023</p>
+        </div>
+        <div>
+            <p class="number">17,605</p>
+            <p class="bold">SAMPLES TESTED</p>
+            <p class="light">On To Oct 30, 2023</p>
+        </div>
+        <div class="uplo">
+            <a href="">
+                <p class="upper">RECENT</p>
+            </a>
+            <a href="">
+                <p class="lower">STATISTICS</p>
+            </a>
+
+        </div>
+        <i class="fa-solid fa-down-long"></i>
+    </div>
+    <hr>
+    <div class="line5">
+        <span>How AarogyaSetu Knows about your COVID-19 positive status?</span>
+    </div>
+    <div class="line6">
+        <p class="line6img"><img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/covid-state-1.png"
+                alt="line6img1" />Your Sample is Collected at Lab</p>
+        <p class="line6img"><img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/covid-state-2.png"
+                alt="line6img2" />Collected Sample is analyzed</p>
+        <p class="line6img"><img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/covid-state-3.png"
+                alt="line6img3" />Lab uploads the test results to ICMR Portal. This is mandatory for AarogyaSetu to
+            know, if you have tested +ve</p>
+        <p class="line6img"><img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/covid-state-4.png"
+                alt="line6img4" />if you test +ve, ICMR Shares your details with AarogyaSetu</p>
+        <p class="line6img"><img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/covid-state-5.png"
+                alt="line6img5" />AarogyaSetu Changes your status to COVID+ve (RED) & initiate contact tracing</p>
+    </div>
+    <div class="line7">
+        Note: Inspite of testing positive for covid-19, if your Aarogyasetu App status is still showing safe, then you
+        should contact the testing lab (from where your test samples were submitted) and check whether your correct
+        details have been uploaded on the ICMR portal by the lab.
+    </div>
+    <section class="place1">
+        <div class="container1">
+            <h1><span class="regis">-</span> #CoWIN Registration with Aarogya Setu App</h1>
+            <iframe width="510" height="302" src="https://www.youtube.com/embed/XmA0-_e2gpQ"
+                title="#CoWIN Registration with Aarogya Setu App" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>The complete process of registration of Co-WIN via Aarogya Setu App.</p>
+        </div>
+        <div class="container2">
+            <h1><span class="work">-</span> How does Aarogya Setu work?</h1>
+            <iframe width="510" height="302" src="https://www.youtube.com/embed/phc1UAQQ81s"
+                title="Aarogya Setu App | English Version" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>Aarogya Setu uses contact tracing to record details of all the people you may have come in contact with,
+                as you go about your normal activities. If any one of them, at a later point in time, tests positive for
+                COVID-19, you are immediately informed and proactive medical intervention is arranged for you.</p>
+            <p>For registration of Aarogyasetu, the individual needs an Indian mobile number operated in India.</p>
+            <p></p>Android Version 5 & above and iOS version 10.3 & above</p>
+        </div>
+    </section>
+    <section class="place2">
+        <h1><span class="p2dash">-</span> COVID-19 Across India</h1>
+        <p class="date">4-Jan-2024 15:00:26</p>
+        <div class="box">
+            <div class="pink_box">
+                <p><span>48,01,689</span><br>Total Cases</p>
+            </div>
+            <div class="red_box">
+                <p><span>471</span><br>Active</p>
+            </div>
+            <div class="green_box">
+                <p><span>3,686</span><br>Discharged</p>
+            </div>
+            <div class="black_box">
+                <p><span>43</span><br>Deaths</p>
+            </div>
+        </div>
+        <div class="p2last">
+            <img src="//aarogyasetu.gov.in/wp-content/themes/setu/assets/images/arogya_svg.png" alt="setu img" />
+            <h4>Download App</h4>
+            <img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/google_play.png"
+                alt="google img" />
+            <img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/app_store.png" alt="apple img" />
+        </div>
+        <p class="crore"><span>21.82 Crore</span> Users are using Aarogya Setu App</p>
+    </section>
+    <section class="place3">
+        <h2><span class="why_before">- </span><span class="why">Why?</span><span class="why_after">Aarogya Setu</span>
+        </h2>
+        <section class="contains">
+            <div class="contain1">
+                <div class="contain1head">
+                    <img src="//aarogyasetu.gov.in/wp-content/themes/setu/assets/images/arogya_svg.png" alt="setu img"
+                        width="10%" height="10%" />
+                    <h3>One Stop Solution</h3>
+                </div>
+                <p>Aarogyasetu has transformed into National Health App, brining you a whole plethora of digital health
+                    services powered by Ayushman Bharat Digital Mission (ABDM). Using Aarogyasetu, you can now register
+                    for
+                    your Ayushman Bharat Health Account (i.e., Digital Health ID) and leverage it for your interaction
+                    with
+                    participating healthcare providers, and allows you to receive your digital lab reports,
+                    prescriptions
+                    and diagnosis seamlessly from verified healthcare professionals and health service providers.</p>
+            </div>
+            <div class="contain2">
+                <div class="contain2head">
+                    <img src="//aarogyasetu.gov.in/wp-content/themes/setu/assets/images/arogya_svg.png" alt="setu img"
+                        width="10%" height="10%" />
+                    <h3>Consult your Doctor</h3>
+                </div>
+                <p>Aarogyasetu helps you to schedule online doctor appointments powered by eSanjeevani OPD Application.
+                    You can schedule doctor appointments and consult with doctor from the comfort of your home. Your
+                    ePrescription will be readily available once synced.</p>
+            </div>
+            <div class="contain3">
+                <div class="contain3head">
+                    <img src="//aarogyasetu.gov.in/wp-content/themes/setu/assets/images/arogya_svg.png" alt="setu img"
+                        width="10%" height="10%" />
+                    <h3>COVID-19 Vaccination</h3>
+                </div>
+                <p>Aarogyasetu helps you to schedule/reschedule/cancel your appointments for covid-19 vaccination. Using
+                    Aarogyasetu you can download the vaccination certificate or can request for changes in certificate
+                    as well. Your certificate will be readily available once synced.</p>
+            </div>
+        </section>
+    </section>
+    <section class="media">
+        <div class="media_start">
+            <h2><span class="media_dash">- </span>Media Gallery</h2>
+            <p class="media_text">Infographics, Videos based on the official information on COVID-19.</p>
+            <p class="info_vid"><span class="info">Infographics</span><span class="vid">Videos</span></p>
+            <p class="empty"> </p>
+        </div>
+        <div class="media_imgs">
+            <div class="mimg1">
+                <img src="https://static.mygov.in/media/transformingindia/2023/01/WhatsApp-Image-2023-01-01-at-18.03.05.jpeg"
+                    alt="media img1" width="100%" height="70%" />
+                <p>Guidlines for International Arrivals</p>
+            </div>
+            <div class="mimg2">
+                <img src="https://static.mygov.in/media/transformingindia/2023/01/WhatsApp-Image-2023-01-01-at-18.03.05-1.jpeg"
+                    alt="media img2" width="100%" height="70%" />
+                <p>Guidlines for International Arrivals</p>
+            </div>
+            <div class="mimg3">
+                <img src="https://static.mygov.in/media/transformingindia/2022/07/sabka-saath.jpg" alt="media img3"
+                    width="100%" height="80%" />
+                <p>India's vaccine campaign is a living example of Sabka Saath, Sabka Vikas: PM Modi</p>
+            </div>
+        </div>
+        <p class="scroll"><i class="fa-solid fa-angle-left"></i> <i class="fa-solid fa-angle-right"></i></p>
+    </section>
+    <section class="place4">
+        <div class="twitter">
+            <div class="twit1">
+                <p class="twithead"><span class="setu_twit">Tweets from @SetuAarogya</span><span class="follow">Follow
+                        on Twitter</span></p>
+                <hr>
+                <div class="twitmain">
+                    <img src="setu_twitter.png" alt="twitter img" width="60%" />
+                    <p>View on Twitter</p>
+                </div>
+            </div>
+            <div class="twit2">
+                <img src="setu_phone.png" alt="phone img" />
+            </div>
+        </div>
+    </section>
+    <section class="place5">
+        <img src="https://aarogyasetu.gov.in/wp-content/themes/setu/assets/images/document.png" alt="checklist img" />
+    </section>
+</body>
+
+</html>
